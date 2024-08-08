@@ -1,0 +1,43 @@
+    1  pkg install openjdk-17
+    2  help
+    3  update
+    4  pkg install update
+    5  apt update
+    6  apt upgrade
+    7  apt update
+    8  apt upgrade
+    9  pkg install openjdk-17
+   10  help
+   11  termux help
+   12  help termux
+   13  info termux
+   14  apt update
+   15  pkg install openjdk-17
+   16  termux-change-repo
+   17  pkg install openjdk-17
+   18  apt-get update
+   19  pkg install openjdk-17
+   20  apt-get update--fix-missing
+   21  apt-get update --fix-missing
+   22  pkg install openjdk-17
+   23  termux-change-repo
+   24  pkg install openjdk-17
+   25  apt update
+   26  apt list-installed
+   27  pkg list-installed
+   28  pkg search ssh
+   29  git
+   30  exit
+   31  pkg list-installed
+   32  pkg install python
+   33  clear
+   34  cd 234676124-ANTERO
+   35  ls
+   36  gh repo clone https://github.com/brenn-08/234676124-ANTERO
+   37  pkg install gh
+   38  gh repo clone https://github.com/brenn-08/234676124-ANTERO
+   39  gh auth login
+   40  gh repo clone https://github.com/brenn-08/234676124-ANTERO
+   41  ls
+   42  git checkout -b finalexam
+   43  history > exam_log.txt
