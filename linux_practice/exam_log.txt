@@ -1,0 +1,31 @@
+    1  ls
+    2  cd 234676124-ANTERO
+    3  mkdir linux_practice
+    4  cd linux_practice
+    5  touch notes.txt
+    6  ls >> notes.txt
+    7  cat notes.txt
+    8  echo "Hello, Linux!">>notes.txt
+    9  echo "This is a practical exam.">>notes.txt
+   10  head notes.txt
+   11  tail notes.txt
+   12  mkdir subdir
+   13  mv notes.txt subdir
+   14  ls
+   15  mv subdir practice_subdir
+   16  cd practice_subdir
+   17  cp notes.txt ../notes.txt
+   18  date
+   19  time
+   20  uptime
+   21  du -sh $HOME
+   22  ssh -V
+   23  php -v
+   24  mariadb --version
+   25  apache2 -v
+   26  apachectl -v
+   27  java -version
+   28  history
+   29  cd ..
+   30  ls
+   31  history > exam_log.txt
