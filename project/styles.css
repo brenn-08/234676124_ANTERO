@@ -1,549 +1,532 @@
 html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-  }
-  
-  /* FOR THE BACKGROUND */
-  .background {
-    position: relative;
-    height: 500px;
-    overflow: hidden;
-  }
-  
-  .blur {
-    filter: blur(4px);
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* FOR THE PROFILE PICTURE */
-  .profile {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    right: 50px;
-    transform: translateY(-50%);
-  }
-  
-  .profile-pic {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: 10px solid rgb(255, 255, 255);
-    object-fit: cover;
-  }
-  
-  /* FOR THE NAME AND TITLE */
-  .name-title {
-    position: absolute;
-    text-align: center;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-    color: rgb(255, 253, 250);
-    letter-spacing: 5px;
-  }
-  
-  h1 {
-    font-family: Century Gothic, sans-serif;
-    font-size: 600%;
-    font-weight: 500%;
-    line-height: 0.10;
-  }
-  
-  h2 {
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-weight: 500;
-    font-size: 250%;
-    line-height: 0.8;
-  }
-  
-  /* FOR THE NAVIGATION BUTTONS (WITHIN THE PAGE) */
-  .nav {
-    position: absolute;
-    top: 50%;
-    right: 17%;
-    transform: translateY(-50%);
-  }
-  
-  .nav a {
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-size: 120%;
-    font-weight: bold;
-    color: rgb(98, 135, 190);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    letter-spacing: 2px;
-  }
-  
-  /* FOR THE ABOUT SECTION */
-  .about {
-    padding-top: 20px;
-    padding-left: 500px;
-    padding-right: 500px;
-    padding-bottom: 80px;
-    font-family: EB Garamond;
-    font-size: 250%;
-    line-height: 0.80cm;
-  }
-  
-  .about h3 {
-    text-align: center;
-    letter-spacing: 5px;
-  }
-  
-  .about p {
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-size: 50%;
-  }
-  
-  /* FOR THE PHOTOS RELATING TO HOBBIES */
-  .images {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  .collage {
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 4px;
-  }
-  
-  .collage img {
-    width: 376px;
-    height: 380px;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-  }
-  
-  .collage img:hover {
-    transform: scale(1.05);
-  }
-  
-  /* FOR THE ABOUT CONTENT */
-  .about h4 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 70%;
-    letter-spacing: 1px;
-  }
-  
-  .about li {
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-size: 50%;
-  }
-  
-  /* FOR THE RESUME SECTION */
-  .resume {
-    padding-top: 50px;
-    padding-left: 500px;
-    padding-right: 500px;
-    padding-bottom: 50px;
-    font-size: 250%;
-    line-height: 0.80cm;
-    background-color: rgb(220, 236, 252);
-    text-align: center;
-    letter-spacing: 5px;
-  }
-  
-  /* FOR THE SKILLS AND EXPERIENCE */
-  #s-e {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
-    padding-top: 40px;
-    padding-bottom: 10px;
-    font-size: 250%;
-  }
-  
-  .skills, .experience {
-    flex: 1;
-    padding: 20px;
-    padding-bottom: 0px;
-    border-radius: 8px;
-    line-height: 0.70cm;
-  }
-  
-  .skills {
-    padding-left: 480px;
-  }
-  
-  .experience {
-    padding-right: 480px;
-  }
-  
-  .skills h4, .experience h4 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 70%;
-    letter-spacing: 1px;
-  }
-  
-  .skills p, .experience p, .experience li {
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-size: 45%;
-  }
-  
-  hr.solid {
-    border-top: 3px solid #90befa;
-  }
-  
-  /* FOR THE SKILLS GRAPH */
-  #graph {
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    padding-left: 500px;
-    padding-right: 500px;
-    padding-bottom: 100px;
-    font-size: 250%;
-    line-height: 0.70cm;
-  }
-  
-  .skill {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    font-size: 70%;
-  }
-  
-  .skill p {
-    flex-basis: 180px;
-    margin: 0;
-    align-items: center;
-    font-weight: bold;
-    font-size: 60%;
-    white-space: nowrap
-  }
-  
-  .stars {
-    text-align: left;
-    margin-left: 120px;
-    flex-basis: 100px;
-    align-items: center;
-    font-size: 24px;
-    font-size: 70%;
-  }
-  
-  .description {
-    margin-left: 80px;
-    color: gray;
-    font-size: 56%;
-  }
-  
-  /* FOR THE EDUCATION SECTION */
-  #educ {
-    padding-top: 50px;
-    padding-left: 500px;
-    padding-right: 500px;
-    padding-bottom: 120px;
-    font-size: 250%;
-    line-height: 0.80cm;
-    background-color: rgb(229, 238, 247);
-    text-align: center;
-  }
-  
-  .education h4 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 70%;
-    letter-spacing: 1px;
-  }
-  
-  .education p {
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-size: 45%;
-  }
-  
-  /* FOR THE EDUCATIONAL TIMELINE */
-  .educ-timeline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    padding-top: 30px;
-    margin-left: 20px;
-    border-left: 2px solid #cfcbcb;
-  }
-  
-  .educ-bg {
-    position: relative;
-    background-color: #f0f0f0;
-    padding: 20px;
-    margin-bottom: 20px;
-    margin-left: 50px;
-    margin-top: 10px;
-    width: 88%;
-    border-left: 5px solid #283758;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .educ-bg h4 {
-    margin: 0;
-    font-size: 50%;
-    color: #283758;
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-  }
-  
-  .educ-timeline .desc {
-    margin-left: 80px;
-    margin-right: 50px;
-    font-size: 40%;
-  }
-  
-  .degree {
-    margin-top: 5px;
-    font-style: italic;
-    color: #333;
-  }
-  
-  .year {
-    margin-top: 10px;
-    font-size: 90%;
-    color: #888;
-  }
-  
-  .desc {
-    margin-top: 15px;
-    font-size: 90%;
-    color: #666;
-    text-align: left;
-  }
-  
-  .educ-bg:before {
-    content: '';
-    position: absolute;
-    left: -25px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 10px;
-    width: 10px;
-    background-color: #283758;
-    border-radius: 50%;
-  }
-  
-  /* FOR THE PROJECTS SECTION */
-  #proj {
-    line-height: 0.80cm;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-size: 250%;
-  }
-  
-  .intro {
-    margin-top: 20px;
-    margin-left: 500px;
-    margin-right: 500px;
-    margin-bottom: 50px;
-    font-size: 45%;
-  }
-  
-  h4 {
-    color: #283758;
-    margin-bottom: 30px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 70%;
-    letter-spacing: 1px;
-  }
-  
-  .project {
-    background-color: #ffffff;
-    padding: 30px;
-    margin: 15px auto;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    width: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-  
-  .project:hover {
-    transform: scale(1.02);
-  }
-  
-  .project h4 {
-    margin-top: 0;
-    color: #283758;
-    font-size: 1.2rem;
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    letter-spacing: 0px;
-  }
-  
-  .project p {
-    margin-top: 0;
-    color: #283758;
-    font-size: 40%;
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    letter-spacing: 0px;
-  }
-  
-  .project-links {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    font-size: 65%;
-  }
-  
-  .project-link {
-    color: #283758;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 15px;
-    position: relative;
-    font-size: 65%;
-  }
-  
-  .project-link:hover {
-    color: #0A74DA;
-  }
-  
-  .project-link::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background: #0A74DA;
-    transition: width 0.3s, left 0.3s;
-  }
-  
-  .project-link:hover::after {
-    width: 100%;
-    left: 0;
-  }
-  
-  /* FOR THE CONTACT SECTION */
-  .contact {
-    padding-top: 50px;
-    padding-left: 500px;
-    padding-right: 500px;
-    padding-bottom: 50px;
-    font-size: 250%;
-    line-height: 0.80cm;
-    background-color: rgb(220, 236, 252);
-    text-align: center;
-    letter-spacing: 5px;
-    font-family: EB Garamond;
-  }
-  
-  #contact {
-    padding: 40px 20px;
-    text-align: center;
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    padding-bottom: 100px;
-  }
-  
-  #contact h4 {
-    padding-top: 60px;
-    font-size: 150%;
-    font-weight: bold;
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    padding-bottom: 50px;
-  }
-  
-  #contact h5 {
-    padding-top: 10px;
-    font-size: 100%;
-  }
-  
-  #contact p {
-    padding-top: 0px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 20px;
-  }
-  
-  .contact-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-  
-  .contact-info {
-    flex-basis: 40%;
-    padding: 20px;
-    background-color: #eef6fd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    line-height: 0.70cm;
-  }
-  
-  .contact-info h3 {
-    color: #283758;
-  }
-  
-  .contact-info ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .contact-info li {
-    margin: 10px 0;
-  }
-  
-  .contact-info a {
-    text-decoration: none;
-    color: #283758;
-  }
-  
-  .contact-form {
-    flex-basis: 40%;
-    padding: 20px;
-    background-color: #eef6fd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact-form h5 {
-    color: #283758;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-    margin-right: 20px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .form-group input, .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-  }
-  
-  .btn {
-    background-color: #283758;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-weight: bold;
-    letter-spacing: 2px;
-  }
-  
-  .btn:hover {
-    background-color: #1c2b43;
-  }
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  height: auto;
+  width: auto;
+}
+
+/* FOR THE BACKGROUND */
+.background {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.blur {
+  filter: blur(4px);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+/* FOR THE PROFILE PICTURE */
+.profile {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  right: 2vw;
+  transform: translateY(-50%);
+}
+
+.profile-pic {
+  width: 15vw;
+  height: 15vw;
+  max-width: 100%; 
+  max-height: 100%;
+  border-radius: 50%;
+  border: 0.5rem solid rgb(255, 255, 255);
+  object-fit: cover;
+}
+
+/* FOR THE NAME AND TITLE */
+.name-title {
+  position: absolute;
+  text-align: center;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  color: rgb(255, 253, 250);
+  letter-spacing: 0.2vw;
+  padding: 0 10vw;
+  white-space: nowrap
+}
+
+h1 {
+  font-family: Century Gothic, sans-serif;
+  font-size: 4rem;
+  font-weight: 500%;
+  line-height: 1.5;
+  margin: 0;
+}
+
+h2 {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.0;
+  margin: 0;
+}
+  
+/* FOR THE NAVIGATION BUTTONS (WITHIN THE PAGE) */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  position: absolute;
+  top: 48%;
+  width: 100vw; 
+  transform: translateY(-50%);
+  gap: 0.5rem;
+}
+  
+.nav a {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(98, 135, 190);
+  padding: 1vw 1vw;
+  text-decoration: none;
+  letter-spacing: 0.2vw;
+  transition: transform 0.3s ease, background-color 0.2s ease;
+}
+
+.nav a:hover {
+  background-color: rgba(98, 135, 190, 0.8); 
+  color: #fff;
+  transform: scale(0.8);
+}
+
+/* FOR THE ABOUT SECTION */
+.about {
+  padding: 3vw 20vw 5vw 20vw;
+  font-family: EB Garamond;
+  line-height: 1.6;
+}
+
+.about h3 {
+  text-align: center;
+  letter-spacing: 0.3rem;
+  font-size: 2.5rem;
+}
+
+.about p {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  font-size: 1.1rem;
+}
+
+.about h4 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.1vw;
+}
+
+.about li {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  font-size: 1.1rem;
+}
+
+/* FOR THE PHOTOS RELATING TO HOBBIES */
+.images {
+  display: flex;
+  justify-content: center;
+  padding: 3vw;
+}
+
+.collage {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5vw;
+}
+
+.collage img {
+  width: 19.2vw;
+  height: 40vh;
+  object-fit: cover;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.collage img:hover {
+  transform: scale(1.05);
+}
+
+/* FOR THE RESUME SECTION */
+.resume {
+  padding: 5vw 20vw 5vw 20vw;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  background-color: rgb(220, 236, 252);
+  text-align: center;
+  letter-spacing: 0.5vw;
+}
+  
+/* FOR THE SKILLS AND EXPERIENCE */
+#s-e {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vw 18vw 1vw 18vw;
+  gap: 2vw;
+}
+
+.skills, .experience {
+  flex: 1;
+  padding: 2vw;
+  border-radius: 0.8vw;
+  line-height: 1.5;
+}
+
+.skills h4, .experience h4 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.1vw;
+}
+
+.skills p, .experience p, .experience li {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  font-size: 1.1rem;
+}
+
+hr.solid {
+  border-top: 0.2rem solid #90befa;
+}
+
+/* FOR THE SKILLS GRAPH */
+#graph {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1vw;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  padding-bottom: 8vw;
+  line-height: 1.2;
+}
+
+.skill {
+  display: contents;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.skill p {
+  text-align: left;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  white-space: nowrap
+}
+
+.stars {
+  text-align: left;
+  font-size: 1.0rem;
+  margin-left: 2vw;
+}
+
+.description {
+  color: gray;
+  font-size: 0.8rem;
+  margin-left: 2vw;
+}
+
+/* FOR THE EDUCATION SECTION */
+#educ {
+  padding: 5vw 20vw 5vw 20vw;
+  background-color: rgb(229, 238, 247);
+  text-align: center;
+}
+
+.education h4 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.1vw;
+}
+
+.education p {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* FOR THE EDUCATIONAL TIMELINE */
+.educ-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 2vw;
+  border-left: 0.2rem solid #cfcbcb;
+}
+
+.educ-bg {
+  position: relative;
+  background-color: #f0f0f0;
+  padding: 2vw;
+  margin-bottom: 1vw;
+  margin-left: 5vw;
+  margin-right: 4vw;
+  margin-top: 1vw;
+  width: 78%;
+  border-left: 0.5rem solid #283758;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.educ-bg h4 {
+  margin-top: 1vw;
+  font-size: 1.2rem;
+  color: #283758;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+.educ-timeline .desc {
+  margin-left: 8vw;
+  margin-right: 5vw;
+  font-size: 1.0rem;
+  margin-top: 2vw;
+  color: #666;
+  text-align: left;
+}
+
+.degree {
+  font-style: italic;
+  color: #333;
+}
+
+.year {
+  font-size: 1.1rem;
+  color: #888;
+}
+
+.educ-bg:before {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: #283758;
+  border-radius: 50%;
+}
+
+/* FOR THE PROJECTS SECTION */
+#proj {
+  line-height: 0.80cm;
+  padding: 5vw 18vw 5vw 16vw;
+  text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+.intro {
+  margin-top: 2vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-bottom: 5vh;
+  font-size: 1.1rem;
+}
+
+h4 {
+  color: #283758;
+  margin-bottom: 2vw;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.1vw;
+}
+
+.project {
+  background-color: #ffffff;
+  padding: 2vw;
+  margin: 1.5rem auto;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  width: 80%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: scale(1.02);
+}
+
+.project h4 {
+  margin-top: 0;
+  margin-bottom: 1vw;
+  color: #283758;
+  font-size: 1.1rem;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+.project p {
+  color: #283758;
+  font-size: 1.0rem;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  line-height: 1.3rem;
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5vw;
+  font-size: 0.9rem;
+}
+
+.project-link {
+  color: #214aa3;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  position: relative;
+}
+
+.project-link:hover {
+  color: #0A74DA;
+}
+
+.project-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #1764ac;
+  transition: width 0.3s, left 0.3s;
+}
+
+.project-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* FOR THE CONTACT SECTION */
+.contact {
+  padding: 5vw 20vw 5vw 20vw;
+  font-size: 2.5rem;
+  line-height: 0.80cm;
+  background-color: rgb(220, 236, 252);
+  text-align: center;
+  letter-spacing: 0.5vw;
+  font-family: EB Garamond;
+}
+
+#contact {
+  padding-bottom: 5vw;
+}
+
+#contact h4 {
+  text-align: center;
+  padding-top: 3vw;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  padding-bottom: 3vw;
+}
+
+#contact h5 {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1.0rem;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+#contact p {
+  padding-top: 0vh;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-bottom: 2vh;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2vh;
+}
+
+.contact-info {
+  flex-basis: 40%;
+  background-color: #eef6fd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  line-height: 0.70cm;
+}
+
+.contact-info h3 {
+  color: #283758;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin: 10px 0;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  margin-left: 4vw;
+  margin-right: 1vw;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #283758;
+}
+
+.contact-form {
+  flex-basis: 40%;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  background-color: #eef6fd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h5 {
+  color: #283758;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+.btn {
+  background-color: #283758;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.btn:hover {
+  background-color: #1c2b43;
+}
