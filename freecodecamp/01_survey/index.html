@@ -7,28 +7,70 @@
     <title>Survey Form</title>
 </head>
 <body>
-    <h1 id="title">Title</h1>
-    <p id="description">description</p>
+    <h1 id="title">CITCS Survey Form</h1>
+    <p id="description">Your feedback is essential and will help us better understand the experiences within the department.</p>
+
     <form id="survey-form" action="" required>
         <label id="name-label" for="">Name</label>
-        <input id="name" type="text" placeholder="Your name" required>
+        <input id="name" type="text" placeholder="Enter your name" required>
         <label id="email-label" for="">Email</label>
-        <input id="email" type="email" placeholder="Your email" required>
-        <label id="number-label" for="">Number</label>
-        <input id="number" type="number" min="1" max="20" placeholder="Your number">
+        <input id="email" type="email" placeholder="Enter your email" required>
+        <label id="number-label" for="">Age</label>
+        <input id="number" type="number" min="16" max="100" placeholder="Enter your age (optional)">
 
-        <select name="" id="dropdown">
-            <option value="first">Option 1</option>
-            <option value="second">Option 2</option>
+        <p>Which program are you enrolled in under the CITCS department?</p>
+
+        <select name="program" id="dropdown">
+            <option value="Select" disabled selected hidden>Choose your program...</option>
+            <option value="BSCS">Bachelor of Science in Computer Science</option>
+            <option value="BSDA">Bachelor of Science in Data Analytics</option>
+            <option value="BSDA">Bachelor of Science in Information Technology</option>
+            <option value="BSDA">Associate in Computer Technology</option>
         </select>
 
-        <input type="radio" value="first" name="Button">
-        <input type="radio" value="second" name="Button">
+        <p>How satisfied are you with the CITCS department?</p>
 
-        <input type="checkbox" value="checkbox">
-        <input type="checkbox" value="checkbox">
+        <section id="label">
+            <input type="radio" value="Very satisfied" name="satisfaction"> Very satisfied<br>
+            <input type="radio" value="Satisfied" name="satisfaction"> Satisfied<br>
+            <input type="radio" value="Neutral" name="satisfaction"> Neutral<br>
+            <input type="radio" value="Dissatisfied" name="satisfaction"> Dissatisfied<br>
+            <input type="radio" value="Very dissatisfied" name="satisfaction"> Very dissatisfied<br>
+        </section>
 
-        <textarea name="" id=""></textarea>
+        <p>How would you rate the facilities?</p>
+
+        <section id="label">
+            <input type="radio" value="Excellent" name="rating"> Excellent<br>
+            <input type="radio" value="Good" name="rating"> Good<br>
+            <input type="radio" value="Fair" name="rating"> Fair<br>
+            <input type="radio" value="Poor" name="rating"> Poor<br>
+        </section>
+
+        <p>How would you rate the facilities?teaching methods and effectiveness of CITCS instructors?</p>
+
+        <section id="label">
+            <input type="radio" value="Excellent" name="rating"> Excellent<br>
+            <input type="radio" value="Good" name="rating"> Good<br>
+            <input type="radio" value="Fair" name="rating"> Fair<br>
+            <input type="radio" value="Poor" name="rating"> Poor<br>
+        </section>
+    
+        <p>What would you like to see improved? (Check all that apply)</p>
+
+        <section id="label">
+            <input type="checkbox" value="checkbox" name="Curriculum and course content"> Curriculum and course content<br>
+            <input type="checkbox" value="checkbox" name="Quality of laboratory equipment"> Quality of laboratory equipment<br>
+            <input type="checkbox" value="checkbox" name="Teaching methods and strategies"> Teaching methods and strategies<br>
+            <input type="checkbox" value="checkbox" name="Facilities and classroom conditions"> Facilities and classroom conditions<br>
+            <input type="checkbox" value="checkbox" name="IT labs and computer resources"> IT labs and computer resources<br>
+            <input type="checkbox" value="checkbox" name="Campus Wi-Fi and internet access"> Campus Wi-Fi and internet access<br>
+            <input type="checkbox" value="checkbox" name="Fairness in grading"> Fairness in grading<br>
+        </section>
+
+        <p>Any suggestions or comments?</p>
+
+        <textarea name="comment" id="comment" placeholder="Enter your comment here..."></textarea>
 
         <input id="submit" type="submit">
 
