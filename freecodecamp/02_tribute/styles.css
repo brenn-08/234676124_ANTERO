@@ -1,10 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Century gothic;
+    line-height: 1.6;
+    background-color: rgba(212, 197, 175, 0.801);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 5000px;
+    width: 100%;
+    margin: 0.5rem;
+    padding: 20px;
+    background: rgb(253, 237, 211);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+}
+
+#tribute-info {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
 #img-div {
     display: grid;
     place-items: center;
+    background-color: rgba(238, 223, 204, 0.699);
+    margin: 20px auto;
+    width: 100%;
 }
 
 #image {
-    display: block;
     max-width: 100%;
+    width: 50rem;
     height: auto;
+    margin-bottom: 0.2rem;
+    padding: 20px;
+}
+
+#img-caption {
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    max-width: 700px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#timeline {
+    text-align: left;
+    margin: 20px auto; 
+    max-width: 100%;
+    width: 40rem; 
+}
+
+#timeline ul {
+    padding-left: 0;
+}
+
+#timeline ul li {
+    font-size: 1rem;
+    margin: 0.4rem 0;
+    padding: 0.5rem;
+}
+
+#info {
+    background-color: rgba(238, 223, 204, 0.699);
+    padding: 1rem;
+    padding-bottom: 2.5rem;
+    max-width: 5000px;
+    width: 100;
+}
+
+h3 {
+    font-size: 1rem;
+    margin: 2rem auto;
+    max-width: 700px;
+    width: 100%; 
+}
+
+button {
+    background-color: rgba(240, 214, 181, 0.932);
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    margin: 0.2rem 0;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    max-width: 500px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: rgba(247, 233, 215, 0.932);
+}
+
+@media screen and (max-width: 768px) {
+    #timeline {
+        width: 15rem; 
+    }
+}
+
+@media (max-width: 300px) {
+    h1, h2, h3 {
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+    #tribute-info, #img-caption {
+        font-size: 0.8rem;
+        margin: 1rem;
+    }
+    #timeline ul li {
+        font-size: 0.8rem;
+        width: 10rem;    
+    }
 }
