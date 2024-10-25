@@ -8,62 +8,135 @@
 </head>
 <body>
     <main id="main-doc">
-        <section id="first" class="main-section">
+        <section id="introduction" class="main-section">
             <header>
-                <h1>first</h1>
+                <h1>Introduction</h1>
             </header>
-            <p>hello</p>
-            <p>world</p>
-            <code></code>
+            <p>HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is he set of markup symbols or codes inserted into a file intended for display on the internet. The markup tells web browsers how to display a webpage’s words and images.</p>
+            <p>The language, which has code words and syntax just like any other language, is relatively easy to comprehend and, as time goes on, is increasingly powerful in what it allows someone to create. HTML continues to evolve to meet the demands and requirements of the internet under the guise of the World Wide Web Consortium, the organization that designs and maintains the language—for instance, with the transition to Web 2.0.</p>
+            <p><strong>What is HTML?</strong></p>
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>HTML stands for Hyper Text Markup Language</li>
+                <li>HTML is the standard markup language for creating Web pages</li>
+                <li>HTML describes the structure of a Web page</li>
+                <li>HTML consists of a series of elements</li>
+                <li>HTML elements tell the browser how to display the content</li>
+                <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</li>
             </ul>
         </section>
-        <section id="second" class="main-section">
+
+        <section id="example" class="main-section">
             <header>
-                <h1>second</h1>
+                <h1>Example of a Simple HTML Document</h1>
             </header>
-            <p>hello</p>
-            <p>world</p>
-            <code></code>
+            <pre>
+                <code>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;head&gt;
+                    &lt;title&gt;Page Title&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                
+                    &lt;h1>My First Heading&lt;/h1&gt;
+                    &lt;p>My first paragraph.&lt;/p&gt;
+                
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+            <p><strong>Example Explained:</strong></p>
+            <ul>
+                <li>The <code><mark>&lt;!DOCTYPE html&gt;</mark></code> declaration defines that this document is an HTML5 document</li>
+                <li>The <code><mark>&lt;html&gt;</mark></code> element is the root element of an HTML page</li>
+                <li>The <code><mark>&lt;head&gt;</mark></code> element contains meta information about the HTML page</li>
+                <li>The <code><mark>&lt;title&gt;</mark></code> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)</li>
+                <li>The <code><mark>&lt;body&gt;</mark></code> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.</li>
+                <li>The <code><mark>&lt;h1&gt;</mark></code> element defines a large heading</li>
+                <li>The <code><mark>&lt;p&gt;</mark></code> element defines a paragraph</li>
+            </ul>
         </section>
-        <section id="third" class="main-section">
+
+        <section id="html" class="main-section">
             <header>
-                <h1>third</h1>
+                <h1>HTML and HTML5</h1>
             </header>
-            <p>hello</p>
-            <p>world</p>
-            <code></code>
+            <p>When most people talk about “HTML,” they’re referring to the technology as a whole, including its latest version: HTML5. While it’s very different in many ways, HTML5 is really just a polished update to the old standard.<br><br>While HTML and HTML5 are part of the same system, the big update brought several enhancements to the old coding language, making it even more efficient. Here are just a few examples of what was added.</p>
+            <p>HTML is the standard language used for web development. There are many web development tools that you can use when you are working with HTML. It allows you to create the base structure of a webpage using small tags called markup tags. <br><br>HTML is often paired with other languages such as CSS and JavaScript to extend its functionality. CSS helps you style HTML by adding colors, layouts, and more, while JavaScript is a more traditional programming language that lets you add advanced features.</p>
+            <p>HTML5 is not a separate system, but rather the latest version of HTML technology. Its predecessor, HTML4, had its first and last update in December 1999. HTML5 is actually not very new itself, being released several years ago in 2014. <br><br>Unlike older versions of HTML, which allowed you to create primarily static sites that needed to be spiced up with CSS and JavaScript, HTML5 is much more dynamic and includes multimedia elements. It natively supports video and audio, and you can even make games or animations with it. HTML5 is no longer just a website builder. It’s an entire application builder on its own.</p>
         </section>
-        <section id="fourth"class="main-section">
+
+        <section id="attrib" class="main-section">
             <header>
-                <h1>fourth</h1>
+                <h1>HTML Attributes</h1>
             </header>
-            <p>hello</p>
-            <p>world</p>
-            <code></code>
+            <ul>
+                <li>All HTML elements can have <strong>attributes</strong></li>
+                <li>Attributes provide <strong>additional information</strong> about elements</li>
+                <li>Attributes are always specified in <strong>the start tag</strong></li>
+                <li>Attributes usually come in name/value pairs like: <strong>name="value"</strong>
+                </li>
+            </ul>
+            <p><strong>The href Attribute</strong><br>The <code>&lt;a&gt;</code> tag defines a hyperlink. The href attribute specifies the URL of the page the link goes to:</p>
+            <code class="att">&lt;a href="https://www.w3schools.com">Visit W3Schools&lt;/a&gt;</code>
+            <p><strong>The src Attribute</strong><br>The <code>&lt;img&gt;</code> tag is used to embed an image in an HTML page. The src attribute specifies the path to the image to be displayed:</p>
+            <code class="att">&lt;img src="img_girl.jpg"&gt;</code>
+            <p><strong>The width and height Attributes</strong><br>The <code>&lt;img&gt;</code> tag should also contain the <code>width</code> and <code>height</code> attributes, which specify the width and height of the image (in pixels):</p>
+            <code class="att">&lt;img src="img_girl.jpg" width="500" height="600"&gt;</code>
+            <p><strong>The alt Attribute</strong><br>The required <code>alt</code> attribute for the <code>&lt;img&gt;</code> tag specifies an alternate text for an image, if the image for some reason cannot be displayed. This can be due to a slow connection, or an error in the<code>src</code>attribute, or if the user uses a screen reader.</p>
+            <code class="att">&lt;img src="img_girl.jpg" alt="Girl with a jacket"&gt;</code>
+            <p>See what happens if we try to display an image that does not exist:</p>
+            <code class="att">&lt;img src="img_typo.jpg" alt="Girl with a jacket"&gt;</code>
+            <p><strong>The style Attribute</strong><br>The <code>style</code> attribute is used to add styles to an element, such as color, font, size, and more.</p>
+            <code class="att">&lt;p style="color:red;">This is a red paragraph.&lt;/p&gt;</code>
+            <p><strong>The lang Attribute</strong><br>You should always include the <code>lang</code> attribute inside the <code>&lt;html&gt;</code>tag, to declare the language of the Web page. This is meant to assist search engines and browsers. <br><br>The following example specifies English as the language:</p>
+            <pre>
+                <code>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;body&gt;
+                    ...
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+            <p>Country codes can also be added to the language code in the lang attribute. So, the first two characters define the language of the HTML page, and the last two characters define the country. <br><br>The following example specifies English as the language and United States as the country:</p>
+            <pre>
+                <code>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en-US"&gt;
+                    &lt;body&gt;
+                    ...
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+            <p><strong>The title Attribute</strong><br>The <code>title</code> attribute defines some extra information about an element. <br><br>The value of the title attribute will be displayed as a tooltip when you mouse over the element:</p>
+            <code class="att">&lt;p title="I'm a tooltip">This is a paragraph.&lt;/p&gt;</code>
         </section>
-        <section id="fifth" class="main-section">
+
+        <section id="references" class="main-section">
             <header>
-                <h1>fifth</h1>
+                <h1>References</h1>
             </header>
-            <p>hello</p>
-            <p>world</p>
-            <code></code>
+            <p>The references below offer reliable and insightful information supporting the content presented on this page. These sources provide additional context and depth for readers interested in further exploring the topic:</p>
+            <ul>
+                <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3Schools</a></li>
+                <li><a href="https://www.investopedia.com/terms/h/html.asp" target="_blank">Investopedia</a></li>
+                <li><a href="https://kinsta.com/blog/html-vs-html5/#:~:text=Unlike%20older%20versions%20of%20HTML,games%20or%20animations%20with%20it." target="_blank">Kinsta</a></li>
+            </ul>
         </section>
     </main>
 
     <nav id="navbar">
         <header>
-            <a class="nav-link" href="#first">first</a>
-            <a class="nav-link" href="#second">second</a>
-            <a class="nav-link" href="#third">third</a>
-            <a class="nav-link" href="#fourth">fourth</a>
-            <a class="nav-link" href="#fifth">fifth</a>
+            <h1 class="nbhtml">Hypertext Markup Language</h1>
+            <hr>
+            <a class="nav-link" href="#introduction">Introduction</a><br>
+            <a class="nav-link" href="#example">Simple HTML Document</a><br>
+            <a class="nav-link" href="#html">HTML and HTML5</a><br>
+            <a class="nav-link" href="#attrib">HTML Attributes</a><br>
+            <a class="nav-link" href="#references">References</a><br>
         </header>
     </nav>
     
