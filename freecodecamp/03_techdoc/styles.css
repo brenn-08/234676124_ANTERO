@@ -1,10 +1,155 @@
-@media only screen and (max-width: 600px) {
-    body {
-        background-color: beige;
-    }
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: century gothic;
+    line-height: 1.6;
+    margin: 0;
+    color: rgb(199, 191, 191);
+    min-height: 100vh;
+    display: flex;
+    padding-left: 15rem;
+}
+
+#main-doc {
+    max-width: 100%S;
+    padding: 5rem;
+    background-color: rgb(44, 42, 40); 
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 2rem; 
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.nbhtml {
+    font-size: 1.5rem; 
+    margin-bottom: 2rem;
+    color: rgb(199, 191, 191);
+}
+
+hr {
+    margin-bottom: 2rem;
 }
 
 #navbar {
-    position: fixed;
+    position: fixed; 
     top: 0;
+    left: 0;
+    padding: 2rem;
+    height: 100vh;
+    width: 12rem;
+    max-width: 100rem;
+    background-color: #3d3a35;
+    z-index: 1000;
+    transition: width 0.3s;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: block;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    color: #c2af90; 
+    transform: scale(1.05);
+}
+
+.main-section {
+    margin-bottom: 1rem;
+}
+
+code {
+    padding: 0.2rem 0.4rem;
+}
+
+code.att {
+    display: block;
+    margin: 1rem 0; 
+    background-color: #312f2afa;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+}
+
+pre {
+    background-color: #312f2afa;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+}
+
+mark {
+    background-color: #c7bfab41;
+    color: rgb(199, 191, 191);
+}
+
+a {
+    color: rgb(199, 191, 191);
+}
+
+@media screen and (max-width: 768px) {
+    #navbar {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+    }
+    .nav-link {
+        padding: 0;
+        margin: 0;
+        font-size: 0.8rem;
+        display: inline-flex;
+    }
+    h1 {
+        font-size: 1rem; 
+    }
+    .nbhtml {
+        font-size: 1rem; 
+        margin-bottom: 0;
+    }
+    hr {
+        margin-bottom: 0.5rem;
+    }
+    body {
+        padding-left: 0;
+        margin-top: 5rem; 
+        flex-direction: column;
+    }
+    #main-doc {
+        padding: 2rem 1rem;
+        margin-top: 5rem;
+    }
+    p, li {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 300px) {
+    #navbar {
+        display: none; 
+    }
+    
+    body {
+        padding-left: 0; 
+        margin-top: 0; 
+    }
+    #main-doc {
+        margin-top: 0; 
+        padding: 2rem 1rem; 
+    }
+    pre, code, code.att, #example h1 {
+        display: none;
+    }
 }
