@@ -1,136 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  height: auto;
-  width: auto;
+  font-family: century gothic;
+  line-height: 1.6;
 }
 
 /* FOR THE BACKGROUND */
-.background {
-  position: relative;
-  height: 50vh;
-  overflow: hidden;
+header {
+  position: relative; 
+  width: 100%; 
+  height: 30vh; 
+  overflow: hidden; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
 }
 
-.blur {
-  filter: blur(4px);
-  position: absolute;
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute; 
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  height: auto;
-  max-height: 100%;
-  object-fit: cover;
+  left: 0;
+  z-index: 1; 
+}
+
+.background img {
+  filter: blur(4px);
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
 }
 
 /* FOR THE PROFILE PICTURE */
 .profile {
-  display: flex;
-  position: absolute;
-  top: 50%;
-  right: 2vw;
-  transform: translateY(-50%);
+  position: relative; 
+  z-index: 2; 
 }
 
 .profile-pic {
-  width: 15vw;
-  height: 15vw;
-  max-width: 100%; 
-  max-height: 100%;
+  width: 9.5rem; 
+  height: 9.5rem; 
   border-radius: 50%;
-  border: 0.5rem solid rgb(255, 255, 255);
-  object-fit: cover;
+  border: 4px solid rgb(62, 72, 105); 
 }
 
 /* FOR THE NAME AND TITLE */
 .name-title {
-  position: absolute;
+  position: relative; 
+  color: white; 
   text-align: center;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -40%);
-  color: rgb(255, 253, 250);
   letter-spacing: 0.2vw;
-  padding: 0 10vw;
-  white-space: nowrap
+  z-index: 2; 
 }
 
-h1 {
-  font-family: Century Gothic, sans-serif;
-  font-size: 4rem;
-  font-weight: 500%;
-  line-height: 1.5;
-  margin: 0;
-}
-
-h2 {
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 1.0;
-  margin: 0;
-}
-  
 /* FOR THE NAVIGATION BUTTONS (WITHIN THE PAGE) */
 .nav {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  position: absolute;
-  top: 48%;
-  width: 100vw; 
-  transform: translateY(-50%);
-  gap: 0.5rem;
+  position: fixed; 
+  top: 1rem; 
+  right: 0.8rem; 
+  z-index: 3; 
+  background-color: rgba(120, 188, 228, 0.61); 
+  border-radius: 109px; 
+  padding: 0.6rem 2rem; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+  display: flex; 
+  gap: 1.5rem;
 }
-  
+
 .nav a {
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-  font-size: 1rem;
+  color: #131f46; 
   font-weight: bold;
-  color: rgb(98, 135, 190);
-  padding: 1vw 1vw;
-  text-decoration: none;
-  letter-spacing: 0.2vw;
-  transition: transform 0.3s ease, background-color 0.2s ease;
+  text-decoration: none; 
+  font-size: 1rem; 
+  position: relative; 
+  transition: color 0.3s ease; 
 }
 
 .nav a:hover {
-  background-color: rgba(98, 135, 190, 0.8); 
-  color: #fff;
-  transform: scale(0.8);
+  color: #142546; 
 }
 
-/* FOR THE ABOUT SECTION */
-.about {
-  padding: 3vw 20vw 5vw 20vw;
+.nav a::after {
+  content: ''; 
+  position: absolute;
+  left: 50%;
+  bottom: -5px; 
+  width: 0; 
+  height: 2px;
+  background-color: #a8b0c2; 
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav a:hover::after {
+  width: 100%; 
+  left: 0;
+}
+
+/* GENERAL */
+h3 {
   font-family: EB Garamond;
-  line-height: 1.6;
-}
-
-.about h3 {
   text-align: center;
   letter-spacing: 0.3rem;
   font-size: 2.5rem;
 }
 
-.about p {
+p, li {
   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
   font-size: 1.1rem;
 }
 
-.about h4 {
+.about h4, #s-e h4, #educ .head, #proj .head {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   letter-spacing: 0.1vw;
+  margin-bottom: 2vh;
 }
 
-.about li {
+.about h4, .about p, .about li:last-child, #educ .head, .project h4 {
+  margin-bottom: 2vh;
+}
+
+.resume, #educ, .contact {
+  padding: 5vw 20vw 5vw 20vw;
+}
+
+.educ-bg, .intro {
+  margin: 1vw 4vw 1vw 5vw;
+}
+
+#contact p, .contact-info li:last-child {
+  margin: 0vw 4vw 3vw 4vw;
+}
+
+#contact p, .contact-info li {
+  font-size: 1rem;
+}
+
+.contact-info, .contact-form {
+  background-color: #eef6fd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-  font-size: 1.1rem;
+}
+
+/* FOR THE ABOUT SECTION */
+.about {
+  padding: 3vw 20vw 3vw 20vw;
+  font-family: EB Garamond;
+}
+
+.about h3 {
+  margin-bottom: 4vh;
+}
+
+.about li, .experience li {
+  margin-left: 6vh;
 }
 
 /* FOR THE PHOTOS RELATING TO HOBBIES */
@@ -158,55 +199,40 @@ h2 {
   transform: scale(1.05);
 }
 
-/* FOR THE RESUME SECTION */
-.resume {
-  padding: 5vw 20vw 5vw 20vw;
-  font-size: 2.5rem;
-  line-height: 1.5;
-  background-color: rgb(220, 236, 252);
-  text-align: center;
-  letter-spacing: 0.5vw;
-}
-  
 /* FOR THE SKILLS AND EXPERIENCE */
+.resume {
+  background-color: rgb(220, 236, 252);
+}
+
 #s-e {
   display: flex;
   justify-content: space-between;
-  padding: 2vw 18vw 1vw 18vw;
+  padding: 2vw 18vw 2vw 18vw;
   gap: 2vw;
 }
 
-.skills, .experience {
+.skills,
+.experience {
   flex: 1;
   padding: 2vw;
-  border-radius: 0.8vw;
-  line-height: 1.5;
 }
 
-.skills h4, .experience h4 {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 1.8rem;
-  letter-spacing: 0.1vw;
-}
-
-.skills p, .experience p, .experience li {
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-  font-size: 1.1rem;
+#s-e h4, #s-e p {
+  margin-bottom: 2vh;
 }
 
 hr.solid {
   border-top: 0.2rem solid #90befa;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 /* FOR THE SKILLS GRAPH */
 #graph {
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1vw;
-  padding-left: 20vw;
-  padding-right: 20vw;
-  padding-bottom: 8vw;
+  padding: 0vw 20vw 8vw 20vw;
   line-height: 1.2;
 }
 
@@ -217,16 +243,11 @@ hr.solid {
 }
 
 .skill p {
-  text-align: left;
-  margin: 0;
   font-weight: bold;
-  font-size: 1.1rem;
   white-space: nowrap
 }
 
 .stars {
-  text-align: left;
-  font-size: 1.0rem;
   margin-left: 2vw;
 }
 
@@ -238,29 +259,12 @@ hr.solid {
 
 /* FOR THE EDUCATION SECTION */
 #educ {
-  padding: 5vw 20vw 5vw 20vw;
   background-color: rgb(229, 238, 247);
   text-align: center;
 }
 
-.education h4 {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 1.8rem;
-  letter-spacing: 0.1vw;
-}
-
-.education p {
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.4;
-}
-
 /* FOR THE EDUCATIONAL TIMELINE */
 .educ-timeline {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
   padding-top: 2vw;
   border-left: 0.2rem solid #cfcbcb;
 }
@@ -269,25 +273,20 @@ hr.solid {
   position: relative;
   background-color: #f0f0f0;
   padding: 2vw;
-  margin-bottom: 1vw;
-  margin-left: 5vw;
-  margin-right: 4vw;
-  margin-top: 1vw;
-  width: 78%;
+  width: 90%;
   border-left: 0.5rem solid #283758;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .educ-bg h4 {
-  margin-top: 1vw;
-  font-size: 1.2rem;
   color: #283758;
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  font-size: 1.2rem;
+  font-family: century gothic;
 }
 
 .educ-timeline .desc {
   margin-left: 8vw;
-  margin-right: 5vw;
+  margin-right: 1.5vw;
   font-size: 1.0rem;
   margin-top: 2vw;
   color: #666;
@@ -297,10 +296,11 @@ hr.solid {
 .degree {
   font-style: italic;
   color: #333;
+  font-size: 1.0rem;
 }
 
 .year {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #888;
 }
 
@@ -318,58 +318,34 @@ hr.solid {
 
 /* FOR THE PROJECTS SECTION */
 #proj {
-  line-height: 0.80cm;
   padding: 5vw 18vw 5vw 16vw;
   text-align: center;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-}
-
-.intro {
-  margin-top: 2vh;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  margin-bottom: 5vh;
-  font-size: 1.1rem;
-}
-
-h4 {
-  color: #283758;
-  margin-bottom: 2vw;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 1.8rem;
-  letter-spacing: 0.1vw;
 }
 
 .project {
-  background-color: #ffffff;
   padding: 2vw;
+  width: 80%;
   margin: 1.5rem auto;
   border: 1px solid #ddd;
-  border-radius: 12px;
+  border-radius: 16px;
   width: 80%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
 
-.project:hover {
-  transform: scale(1.02);
-}
-
 .project h4 {
-  margin-top: 0;
-  margin-bottom: 1vw;
   color: #283758;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
 
 .project p {
-  color: #283758;
-  font-size: 1.0rem;
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-  line-height: 1.3rem;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.project:hover {
+  transform: scale(1.02);
 }
 
 .project-links {
@@ -379,19 +355,19 @@ h4 {
   font-size: 0.9rem;
 }
 
-.project-link {
-  color: #214aa3;
+.pl {
+  color: #204083;
   text-decoration: none;
   font-weight: bold;
   margin: 0 15px;
   position: relative;
 }
 
-.project-link:hover {
-  color: #0A74DA;
+.pl:hover {
+  color: #213072;
 }
 
-.project-link::after {
+.pl::after {
   content: '';
   position: absolute;
   left: 50%;
@@ -402,20 +378,14 @@ h4 {
   transition: width 0.3s, left 0.3s;
 }
 
-.project-link:hover::after {
+.pl:hover::after {
   width: 100%;
   left: 0;
 }
 
 /* FOR THE CONTACT SECTION */
 .contact {
-  padding: 5vw 20vw 5vw 20vw;
-  font-size: 2.5rem;
-  line-height: 0.80cm;
   background-color: rgb(220, 236, 252);
-  text-align: center;
-  letter-spacing: 0.5vw;
-  font-family: EB Garamond;
 }
 
 #contact {
@@ -425,74 +395,34 @@ h4 {
 #contact h4 {
   text-align: center;
   padding-top: 3vw;
+  padding-bottom: 2vw;
   font-size: 1.4rem;
-  font-weight: bold;
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-  padding-bottom: 3vw;
 }
 
 #contact h5 {
   text-align: center;
-  padding-top: 10px;
+  padding-top: 2rem;
+  margin-bottom: 1rem;
   font-size: 1.0rem;
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-}
-
-#contact p {
-  padding-top: 0vh;
-  padding-left: 4vw;
-  padding-right: 4vw;
-  padding-bottom: 2vh;
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
 
 .contact-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-top: 2vh;
-}
-
-.contact-info {
-  flex-basis: 40%;
-  background-color: #eef6fd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  line-height: 0.70cm;
-}
-
-.contact-info h3 {
-  color: #283758;
-}
-
-.contact-info ul {
-  list-style: none;
-  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2vw;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 .contact-info li {
   margin: 10px 0;
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  list-style: none;
   margin-left: 4vw;
-  margin-right: 1vw;
-}
-
-.contact-info a {
-  text-decoration: none;
-  color: #283758;
 }
 
 .contact-form {
-  flex-basis: 40%;
-  padding-left: 1vw;
+  padding-left: 3vw;
   padding-right: 1vw;
-  background-color: #eef6fd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form h5 {
-  color: #283758;
 }
 
 .form-group {
@@ -500,23 +430,10 @@ h4 {
   margin-right: 20px;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.form-group input, .form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-}
-
 .btn {
+  width: auto;
   background-color: #283758;
-  color: white;
+  color: rgb(138, 170, 231);
   padding: 15px 30px;
   border: none;
   border-radius: 5px;
@@ -528,5 +445,137 @@ h4 {
 }
 
 .btn:hover {
-  background-color: #1c2b43;
+  background-color: #124d75;
+}
+
+@media screen and (max-width: 768px) {
+  .profile-pic {
+      width: 80px; 
+      height: 80px;
+  }
+  .name-title h1 {
+      font-size: 2.2rem; 
+  }
+  .name-title h2 {
+      font-size: 1.5rem; 
+  }
+  .nav a {
+      position: relative; 
+      font-size: 0.7rem; 
+  }
+  .about, #educ, #proj {
+      padding: 2vw 5vw 2vw 5vw;
+  }
+  .education h4, #proj .head {
+      margin-top: 4vh;
+  }
+  .education p {
+      margin: 2vw 0vw 3vw 0vw;
+  }
+  h3 {
+      font-size: 2rem;
+  }
+  p, li, .skill p, .project h4 {
+      font-size: 1rem;
+  }
+  .about h4, #s-e h4, #educ .head, #proj .head {
+      font-size: 1.4rem;
+      text-align: center;
+  }
+  .collage img {
+      width: 18.5vw;
+  }
+  #s-e {
+      padding: 2vw 3vw 2vw 3vw;
+      display: block;
+  }
+  #graph {    
+      padding: 5vw 3vw 10vw 3vw;
+  }
+  .project p {
+      font-size: 0.8rem;
+      margin-left: 5vw;
+      margin-right: 5vw;
+  }
+  .project-links {
+      margin-bottom: 2vw;
+  }
+  #contact h4 {
+      font-size: 1.2rem;
+  }
+  .contact-container {
+      display: block;
+      margin-left: 2rem;
+      margin-right: 2rem;
+  }
+  .contact-info li:last-child {
+      padding-bottom: 1rem;
+  }
+  .btn {
+      margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 360px) and (max-height: 776px) {
+  .profile-pic {
+      width: 80px; 
+      height: 80px;
+  }
+  .name-title h1 {
+      font-size: 2rem; 
+  }
+  .name-title h2 {
+      font-size: 1.2rem; 
+  }
+  #graph {    
+      padding: 5vw 0vw 10vw 3vw;
+  }
+  .skill p {
+      font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 390px) and (max-height: 797px) {
+  .profile-pic {
+      width: 80px; 
+      height: 80px;
+  }
+  #graph {    
+      padding: 5vw 0vw 10vw 3vw;
+  }
+  .skill p {
+      font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 200px) and (max-height: 242px) {
+  .nav {
+      display: none;
+  }
+  .profile-pic {
+      display: none;
+  }
+  .name-title h1, p, li, .skill p, .project h4, .educ-timeline .desc, .degree, .year, .project-links,#contact h4, #contact h5, #contact p, .contact-info li {
+      font-size: 0.8rem; 
+  }
+  .name-title h2 {
+      font-size: 0.5rem; 
+  }
+  h3, .educ-bg h4 {
+      font-size: 1rem;
+  }
+  .about h4, #s-e h4, #educ .head, #proj .head {
+      font-size: 1rem;
+      text-align: center;
+  }
+  #graph {    
+      display: none;
+  }
+  .contact-info li:first-child {
+      display:none;
+  }
+  .btn {
+      width: 80%;
+      font-size: 0.6rem;
+  }
 }
