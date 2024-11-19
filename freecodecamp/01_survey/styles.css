@@ -6,12 +6,7 @@
 
 body {
     font-family: century gothic;
-    background-image: url(https://onlinepostgrad.com/wp-content/uploads/2022/04/shutterstock_1451794115-1-1-768x513.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    backdrop-filter: blur(4px);
+    background-color: rgb(65, 97, 85);
     display: flexbox;
     justify-content: center;
     align-items: center;
