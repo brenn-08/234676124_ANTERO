@@ -98,6 +98,7 @@ a {
 
 @media screen and (max-width: 768px) {
     #navbar {
+        position:absolute;
         width: 100%;
         height: auto;
         padding: 0;
