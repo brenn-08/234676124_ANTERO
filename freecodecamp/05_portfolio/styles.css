@@ -449,19 +449,33 @@ hr.solid {
 }
 
 @media screen and (max-width: 768px) {
+    .profile {
+        right: 9.5rem;
+        margin-top: 0.5rem;
+    }
     .profile-pic {
-        width: 80px; 
-        height: 80px;
+        width: 3rem; 
+        height: 3rem; 
+        border: 2px solid rgb(62, 72, 105); 
+    }
+    .name-title {
+        position: absolute; 
+        margin-left: 1rem;
     }
     .name-title h1 {
-        font-size: 2.2rem; 
+        font-size: 1.5rem; 
     }
     .name-title h2 {
-        font-size: 1.5rem; 
+        font-size: 1rem; 
+    }
+    .nav {
+        top: 1rem;
+        right: 1rem;
+        padding: 0.2rem 1rem;
     }
     .nav a {
         position: relative; 
-        font-size: 0.7rem; 
+        font-size: 0.5rem; 
     }
     .about, #educ, #proj {
         padding: 2vw 5vw 2vw 5vw;
@@ -517,9 +531,30 @@ hr.solid {
 }
 
 @media (max-width: 360px) and (max-height: 776px) {
+    .profile {
+        right: 10rem;
+        margin-top: 0.5rem;
+    }
     .profile-pic {
-        width: 80px; 
-        height: 80px;
+        width: 4rem; 
+        height: 4rem; 
+        border: 2px solid rgb(62, 72, 105); 
+    }
+    .name-title {
+        position: absolute; 
+        margin-left: 1rem;
+    }
+    .name-title h1 {
+        font-size: 1.5rem; 
+    }
+    .name-title h2 {
+        font-size: 1rem; 
+    }
+    .name-title h1 {
+        font-size: 2rem; 
+    }
+    .name-title h2 {
+        font-size: 1rem; 
     }
     .name-title h1 {
         font-size: 2rem; 
@@ -536,10 +571,6 @@ hr.solid {
 }
 
 @media (max-width: 390px) and (max-height: 797px) {
-    .profile-pic {
-        width: 80px; 
-        height: 80px;
-    }
     #graph {    
         padding: 5vw 0vw 10vw 3vw;
     }
