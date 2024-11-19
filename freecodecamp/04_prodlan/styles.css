@@ -132,13 +132,18 @@ section p {
     color: #574935; ;
     font-family: century;
 }
+#about {
+    padding-top: 5rem;
+}
 
 #menu h1 {
     margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 .menu-section {
     margin: 2rem 0;
+    margin-bottom: 5rem;
 }
 
 .menu-section h3 {
@@ -262,6 +267,7 @@ section p {
 }
 
 #form {
+    padding-top: 3rem;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -304,8 +310,8 @@ input[type="submit"]:hover {
         font-size: 1rem;
     }
     #nav-bar ul {
-        flex-direction: column; 
-        gap: 0.2rem; 
+        flex-direction: row;
+        gap: 0.1rem; 
     }
     #nav-bar li {
         flex: 1 1 auto; 
