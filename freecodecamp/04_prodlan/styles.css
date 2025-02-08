@@ -80,10 +80,13 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #main-title {
-    font-size: 10rem;
+    font-size: 800%;
+    margin-right: 2rem;
+    margin-left: 2rem;
     margin-bottom: 0;
     color: hsl(49, 76%, 64%); 
     letter-spacing: 0.4rem;
@@ -121,7 +124,8 @@ section h1 {
 section h3 {
     font-size: 1.6rem;
     color: #523c2a; 
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 section p {
@@ -138,39 +142,29 @@ section p {
 
 #menu h1 {
     margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
-.menu-section {
-    margin: 2rem 0;
-    margin-bottom: 5rem;
-}
-
-.menu-section h3 {
-    color: #523c2a; 
-    margin-bottom: 2rem;
-    border-bottom: 2px solid #523c2a; 
-    font-size: 2rem;
-}
-
-.menu-item strong {
-    flex: 1; 
+.menu strong {
     font-weight: bold; 
-    color: #ffffff; 
+    color: #f1c3a4e7; 
     background-color: #523c2a; 
     padding: 0.5rem; 
     border-radius: 8px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
     font-size: 1rem;
+    letter-spacing: 0.1rem;
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 30rem;
+    justify-content: center;
 }
 
 .menu-item {
-    display: flex;
-    align-items: center; 
-    justify-content: center;
     height: 3rem;
-    width: 50rem;
-    margin-bottom: 1rem;
+    width: 20rem;
+    margin-bottom: 0.5rem;
     padding: 0.5rem;
     font-family: century;
     background-color: #8a6031; 
@@ -181,20 +175,11 @@ section p {
     transition: transform 0.3s;
 }
 
-.menu-item strong {
-    flex: 1; 
-    font-weight: bold;
-    color: #e4cea6;
-}
-
 .menu-item:hover {
     transform: scale(1.02); 
 }
 
-#specials {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#specials {  
     align-items: center;
     padding: 2rem;
     color: #3c2f2f;
