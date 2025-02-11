@@ -19,13 +19,12 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 1rem 2rem;
-    z-index: 1000;
+    padding: 1rem 1rem;
+    z-index: 1;
 }
 
 #header-img {
     width: 50px; 
-    height: auto;
     margin-right: 1rem;
 }
 
@@ -33,11 +32,13 @@ header {
     font-size: 2rem;
     color: #443213; 
     font-family: 'Playfair Display', serif;
-    text-shadow: 0.1rem 0.1rem #e4bb89;
+    text-shadow: 0.06rem 0.03rem #e4bb89;
 }
 
 #nav-bar {
     margin-left: auto;
+    height: 60px;
+    font-size: 16px;
 }
 
 #nav-bar ul {
@@ -81,6 +82,12 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+#home::before {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    z-index: -1;
 }
 
 #main-title {
