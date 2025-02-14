@@ -1,141 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <title>Product Landing Page</title>
 </head>
+
 <body>
-    <header id="header">
-        <img src="prodlan_imgs/logo.jpg" alt="deja brew" id="header-img">
-        <nav id="nav-bar">
-            <h1 id="logo-des">Deja Brew</h1>
-            <ul>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="nav-logo">
+                <h2 class="logo-des">&#9749; DejaBrew</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="close-button" class="material-symbols-outlined"></button>
                 <li><a class="nav-link" href="#home">Home</a></li>
                 <li><a class="nav-link" href="#about">About</a></li>
                 <li><a class="nav-link" href="#menu">Menu</a></li>
                 <li><a class="nav-link" href="#specials">Specials</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
+            <button id="open-button" class="material-symbols-outlined"></button>
         </nav>
     </header>
 
-    <section id="home">
-        <div class="bg-image"></div>
-        <div class="bg-text">
-            <h1 id="main-title">Deja Brew</h1>
-            <h3 id="tagline">Where Every Sip Tells a Story.</h3>
-            <a class="nav-link" href="#contact">Book the table</a>
-        </div>
-    </section>
+    <main>
+        <section class="hero-section" id="home">
+            <div class="section-content">
+                <div class="home-details">
+                    <h1 class="main-title">Deja Brew</h1>
+                    <h3 class="tagline">Where Every Sip Tells a Story.</h3>
+                    <div class="button">
+                        <a class="nav-link" href="#contact">Book the table</a>
+                    </div>
+                </div>
+                <div class="hero-image"></div>
+            </div>
+        </section>
 
-    <section id="about">
-        <h1>Welcome to Deja Brew: A Cozy New Cafe in Baguio!</h1>
-        <h3>Est. 2024</h3>
-        <p>Nestled in the heart of Baguio, Deja Brew is your new go-to destination for a delightful coffee experience. With a warm and inviting atmosphere, our cafe is designed for everyone—from coffee enthusiasts to those simply looking for a cozy spot to unwind. We proudly serve a curated selection of freshly brewed coffee, artisanal teas, and delectable pastries, all made with love and the finest ingredients. <br><br>At Deja Brew, we believe that every sip should evoke a sense of nostalgia and comfort, reminiscent of the rich café culture that Baguio is known for. Our passionate baristas are dedicated to crafting the perfect cup, whether you prefer a classic espresso or a unique seasonal blend. <br><br>Join us in our beautifully designed space, where you can catch up with friends, enjoy a quiet moment alone, or immerse yourself in the vibrant local community. Come and experience the charm of Deja Brew—where every visit feels like a warm hug in a cup!</p>
-    </section>
+        <section class="about-section" id="about">
+            <div class="section-content">
+                <div class="about-details">
+                    <h1 class="section-title">Welcome to Deja Brew: A Cozy New Cafe in Baguio!</h1>
+                    <h3>Est. 2024</h3>
+                    <p class="text">Nestled in the heart of Baguio, Deja Brew is your new go-to destination for a
+                        delightful coffee experience. With a warm and inviting atmosphere, our cafe is designed for
+                        everyone—from coffee enthusiasts to those simply looking for a cozy spot to unwind. We proudly
+                        serve a curated selection of freshly brewed coffee, artisanal teas, and delectable pastries, all
+                        made with love and the finest ingredients. <br><br>At Deja Brew, we believe that every sip
+                        should evoke a sense of nostalgia and comfort, reminiscent of the rich café culture that Baguio
+                        is known for. Our passionate baristas are dedicated to crafting the perfect cup, whether you
+                        prefer a classic espresso or a unique seasonal blend. <br><br>Join us in our beautifully
+                        designed space, where you can catch up with friends, enjoy a quiet moment alone, or immerse
+                        yourself in the vibrant local community. Come and experience the charm of Deja Brew—where every
+                        visit feels like a warm hug in a cup!</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="menu">
-        <h1>Deja Brew Cafe Menu</h1>
-        <h3>Beverages</h3>
-        <div class="menu"><strong>Coffee Selections:</strong></div>
-        <div class="drink-section">
-            <div class="menu-item">Espresso</div>
-            <div class="menu-item">Americano </div>
-            <div class="menu-item">Cappuccino </div>
-            <div class="menu-item">Latte</div>
-            <div class="menu-item">Mocha</div>
-            <div class="menu-item">Cold Brew</div>
-        </div>
-        <div class="menu"><strong>Specialty Drinks:</strong></div> 
-        <div class="drink-section">  
-            <div class="menu-item">Vanilla Chai Latte</div>
-            <div class="menu-item">Matcha Green Tea Latte</div>
-            <div class="menu-item">Seasonal Flavors</div>
-        </div> 
-        <div class="menu"><strong>Teas:</strong></div>
-        <div class="drink-section">
-            <div class="menu-item">Herbal Tea Selection</div>
-            <div class="menu-item">Black Tea</div>
-            <div class="menu-item">Green Tea</div>
-        </div>
-        
-        <h3>Food Selections</h3>
-        <div class="menu"><strong>Pastries and Baked Goods:</strong></div>
-        <div class="food-section">
-            <div class="menu-item">Freshly Baked Croissants</div>
-            <div class="menu-item">Muffins</div>
-            <div class="menu-item">Cookies</div>
-        </div>
-        <div class="menu"><strong>Light Bites:</strong></div>
-        <div class="food-section">
-            <div class="menu-item">Avocado Toast</div>
-            <div class="menu-item">Caprese Salad</div>
-            <div class="menu-item">Quiche of the Day</div>
-        </div>
-        <div class="menu"><strong>Lunch Specials:</strong></div>
-        <div class="food-section">
-            <div class="menu-item">Panini Sandwiches</div>
-            <div class="menu-item">Soup of the Day</div>
-            <div class="menu-item">Salad Bowls</div>
-        </div>
-        <div class="menu"><strong>Desserts:</strong></div>
-            <div class="menu-item">Cheesecake</div>
-            <div class="menu-item">Chocolate Lava Cake</div>
-        </div>
-        <div class="menu"><strong>Extras:</strong></div>
-        <div class="food-section">
-            <div class="menu-item">Alternatives: Almond, Soy, Oat, Coconut</div>
-            <div class="menu-item">Syrups: Vanilla, Caramel, Hazelnut</div>
-        </div>
-    </section>
-
-    <section id="specials">
-        <h1>Daily Specials at Deja Brew</h1>
-        <div class="specials-section">
-            <div class="special-item"><strong>1. Coffee of the Day:</strong> A rotating selection of our finest brews, highlighting unique flavors and origins. Ask your barista for today’s special!</div>
-            
-            <div class="special-item"><strong>2. Sweet Treat Thursdays:</strong> Enjoy any pastry with your drink for just $2! Choose from our freshly baked croissants, muffins, or cookies.</div>
-            
-            <div class="special-item"><strong>3. Weekend Brunch Special:</strong> Join us every Saturday and Sunday for our Weekend Brunch! Enjoy a complimentary coffee with any brunch item, featuring:
-                <ul>
-                    <li>Eggs Benedict - Poached eggs, Canadian bacon, and hollandaise sauce on a toasted English muffin.</li>
-                    <li>Breakfast Burrito - Scrambled eggs, cheese, and your choice of sausage or veggies wrapped in a warm tortilla.</li>
+        <section class="menu-section" id="menu">
+            <h1 class="section-title">Deja Brew Cafe Menu</h1>
+            <div class="section-content">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <img src="" alt="Coffee Selections" class="menu-image">
+                        <div class="menu-details">
+                            <h3 class="name">Coffee Selections</h3>
+                            <p class="text">Discover our finest coffee selections, crafted from premium beans for a rich
+                                and satisfying experience.</p>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <img src="" alt="Specialty Drinks" class="menu-image">
+                        <div class="menu-details">
+                            <h3 class="name">Specialty Drinks</h3>
+                            <p class="text">Enjoy our handcrafted specialty drinks, featuring unique flavors and expert
+                                blends for a delightful coffee experience.</p>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <img src="" alt="Tea Selections" class="menu-image">
+                        <div class="menu-details">
+                            <h3 class="name">Tea Selections</h3>
+                            <p class="text">Explore our selection of fine teas, featuring classic blends and soothing
+                                herbal infusions for a perfect, refreshing experience.</p>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <img src="" alt="Pastries and Baked Goods" class="menu-image">
+                        <div class="menu-details">
+                            <h3 class="name">Pastries and Baked Goods</h3>
+                            <p class="text">Indulge in our fresh pastries and baked goods, crafted daily for the perfect
+                                balance of flavor and sweetness.</p>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <img src="" alt="Lunch Specials" class="menu-image">
+                        <div class="menu-details">
+                            <h3 class="name">Lunch Specials</h3>
+                            <p class="text">Enjoy our delicious lunch specials, featuring fresh ingredients and
+                                flavorful dishes perfect for any midday craving.</p>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <img src="" alt="Decadent Delights" class="menu-image">
+                        <div class="menu-details">
+                            <h3 class="name">Decadent Delights</h3>
+                            <p class="text">Savor our exquisite selection of desserts, crafted with the finest
+                                ingredients for a rich and indulgent treat.</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
-            
-            <div class="special-item"><strong>4. Seasonal Flavor Showcase:</strong> Experience our limited-time seasonal flavors, such as:
-                <ul>
-                    <li>Pumpkin Spice Latte - A fall favorite with rich pumpkin, spices, and whipped cream.</li>
-                    <li>Peppermint Mocha - A holiday treat combining chocolate, espresso, and a refreshing mint twist.</li>
+        </section>
+
+        <section class="specials-section" id="specials">
+            <div class="section-content">
+                <div class="specials-details">
+                    <h1 class="section-title">Daily Specials at Deja Brew</h1>
+                    <p class="text">Discover something new and exciting every day at Déjà Brew! Our Daily Specials are
+                        carefully curated to bring you the best flavors of the season, from handcrafted coffee creations
+                        and refreshing tea infusions to freshly baked pastries and satisfying lunch specials. Each day
+                        offers a unique selection, made with the finest ingredients to keep things fresh and flavorful.
+                        Whether you're craving a bold espresso, a sweet indulgence, or a hearty meal, there's always a
+                        special treat waiting just for you. Stop by and experience the perfect blend of taste and
+                        tradition—only at Deja Brew!</p>
+                    <div class="button">
+                        <a class="nav-link" href="#specials">Today's Specials</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="section-content">
+                <ul class="contact-list">
+                    <li class="contact-info">
+                        <i class="fa-solid fa-location-crosshairs"></i>
+                        <p>123 Baguio City, Benguet</p>
+                    </li>
+                    <li class="contact-info">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>09123456789</p>
+                    </li>
+                    <li class="contact-info">
+                        <i class="fa-regular fa-clock"></i>
+                        <p>Monday - Saturday: 9:00 AM - 11: 00 PM</p>
+                    </li>
+                    <li class="contact-info">
+                        <i class="fa-regular fa-clock"></i>
+                        <p>Sunday: Closed</p>
+                    </li>
+                    <li class="contact-info">
+                        <i class="fa-solid fa-globe"></i>
+                        <p>https://dejabrew.vercel.app/</p>
+                    </li>
                 </ul>
+                <form action="#" class="contact-form">
+                    <input type="text" placeholder="Your name" class="form-input" required />
+                    <input type="email" placeholder="Your email" class="form-input" required />
+                    <textarea placeholder="Your message" class="form-input" required></textarea>
+                    <button type="submit" class="button submit-button">Submit</button>
+                </form>
             </div>
-        
-            <div class="special-item"><strong>5. Happy Hour:</strong> Join us from 3 PM to 5 PM for Happy Hour! Enjoy 20% off all beverages and select snacks. Perfect for a mid-afternoon pick-me-up!</div>
-            
-            <div class="special-item"><strong>6. Community Thursdays:</strong> Every Thursday, bring a friend and enjoy a buy-one-get-one-free on any coffee or tea. Connect with friends while sipping your favorites!</div>
-        
-            <div class="special-item"><strong>7. Healthier Choice:</strong> Try our Quinoa Salad Bowl— a nutritious blend of quinoa, fresh vegetables, and a zesty dressing, perfect for a light lunch!</div>
+        </section>
 
-            <div class="video-container">
-                <iframe width="400" height="250" src="https://www.youtube.com/embed/VO6tRFgpmVA" frameborder="0" allowfullscreen></iframe>
+        <footer class="footer-section">
+            <div class="section-content">
+                <p class="copyright">© 2024 Deja Brew</p>
+                <p class="policy">
+                    <a href="#" class="policy-link">Privacy policy</a>
+                    <span class="separator">•</span>
+                    <a href="#" class="policy-link">Refund policy</a>
+                </p>
             </div>
-        </div>
-        
-    </section>
+        </footer>
+    </main>
 
-    <section id="contact">
-        <form id="form" action="" method="POST">
-            <h2>Name:</h2>
-            <input id="name" placeholder="Enter your name" type="text" name="name" required>
-            <h2>Email:</h2>
-            <input id="email" placeholder="Enter your email" type="email" name="email" required>
-            <h2>Phone Number:</h2>
-            <input id="phone" placeholder="Enter your phone number (optional)" type="tel" name="phone">
-            <h2>Message:</h2>
-            <textarea id="message" placeholder="Your message here..." name="message" rows="4" required></textarea>
-            <input id="submit" type="submit" value="Send Message">
-        </form>
-    </section>
 </body>
 </html>
