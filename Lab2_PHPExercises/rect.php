@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Area and Perimeter of a Rectangle</title>
+    <title>Introduce Yourself</title>
 
     <style>
         body {
@@ -77,10 +77,13 @@
             transform: translateY(-3px);
         }
 
-        .color {
-            color: blue;
+        .colorOne {
+            color: green;
         }
 
+        .colorTwo {
+            color: purple;
+        }
     </style>
 </head>
 
@@ -100,7 +103,6 @@
             echo "Given rectangle dimensions: <br> Length: <span class='color'>$length</span> <br> Width: <span class='color'>$width</span>. <br><br> Area: $area <br> Perimeter: $perimeter"
 
             ?>
-
         </div>
     </div>
 
@@ -109,3 +111,4 @@
 </body>
 
 </html>
+
