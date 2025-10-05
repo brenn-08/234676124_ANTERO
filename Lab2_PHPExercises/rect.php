@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Math</title>
+    <title>Area and Perimeter of a Rectangle</title>
 
     <style>
         body {
@@ -85,7 +85,7 @@
 </head>
 
 <body>
-    <h3>Simple Math</h3>
+    <h3>Area and Perimeter of a Rectangle</h3>
 
     <div class="polaroid-card">
         <div class="photo"></div>
