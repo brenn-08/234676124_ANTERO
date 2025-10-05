@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Area and Perimeter of a Rectangle</title>
+    <title>Simple Math</title>
 
     <style>
         body {
