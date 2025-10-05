@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Math</title>
+    <title>Area and Perimeter of a Rectangle</title>
 
     <style>
         body {
@@ -35,7 +35,7 @@
             text-align: center;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
             border-radius: 4px;
-            transform: rotate(-2deg);
+            transform: rotate(2deg);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
