@@ -77,13 +77,10 @@
             transform: translateY(-3px);
         }
 
-        .colorOne {
-            color: green;
+        .color {
+            color: blue;
         }
 
-        .colorTwo {
-            color: purple;
-        }
     </style>
 </head>
 
@@ -111,4 +108,3 @@
 </body>
 
 </html>
-
