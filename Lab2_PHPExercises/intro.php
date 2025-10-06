@@ -99,7 +99,7 @@
             $faveColorOne = "green";
             $faveColorTwo = "purple";
 
-            echo "Hello everyone, I'm <strong>$name</strong>! <br> I am <strong>$age</strong> years old. <br> My favorite colors are <span class='colorOne'>$faveColorOne</span> and <span class='colorTwo'>$faveColorTwo</span>."
+            echo "Hello everyone, I'm <strong>$name</strong>! <br> I am <strong>$age</strong> years old. <br> My favorite colors are <span class='colorOne'>$faveColorOne</span> and <span class='colorTwo'>$faveColorTwo</span>.";
             ?>
         </div>
     </div>

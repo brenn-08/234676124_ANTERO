@@ -99,7 +99,7 @@
             $product = $a * $b;
             $quotient = $a / $b;
 
-            echo "Given numbers: <span class='color'>$a</span> and <span class='color'>$b</span>. <br><br> Sum: $sum <br> Difference: $difference <br> Product: $product <br> Quotient: $quotient"
+            echo "Given numbers: <span class='color'>$a</span> and <span class='color'>$b</span> <br><br> Sum: $sum <br> Difference: $difference <br> Product: $product <br> Quotient: $quotient";
 
             ?>
 

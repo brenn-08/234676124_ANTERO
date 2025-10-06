@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperature Converter</title>
+    <title>Salary Calculator</title>
 
     <style>
         body {
@@ -47,7 +47,7 @@
         .photo {
             width: 100%;
             height: 220px;
-            background-image: url('https://i0.wp.com/inasianspaces.com/wp-content/uploads/2025/08/the-fragrant-flower-blooms-with-dignity-kaoruko-and-subaru-at-cafe.jpg?resize=840,473&ssl=1');
+            background-image: url('https://m.media-amazon.com/images/M/MV5BMTNlZGJhMzUtMTFlZS00NDE5LWIwMWItNzA1NDk4YTQwNDBiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg');
             background-size: cover;
             background-position: center;
             border-radius: 3px;
@@ -85,18 +85,22 @@
 </head>
 
 <body>
-    <h3>Temperature Converter</h3>
+    <h3>Salary Calculator</h3>
 
     <div class="polaroid-card">
         <div class="photo"></div>
         <div class="text">
             <?php
-            $celsius = 26;
-            $fahrenheit = ($celsius * 9 / 5) + 32;
+            $basic_salary = 80000;
+            $allowance = 6000;
+            $deduction = 4000;
 
-            echo "Given temperature:<br> Celsius: <span class='color'>$celsius °C</span> <br><br>Celsius to Fahrenheit:<br> Fahrenheit: <span class='color'>$fahrenheit °F</span>";
+            $net_salary = $basic_salary + $allowance - $deduction;
+
+            echo "Basic Salary: <span class='color'>$basic_salary</span><br>Allowance: <span class='color'>$allowance</span><br>Deduction: <span class='color'>$deduction</span><br><br> Net Salary: <span class='color'>$net_salary</span>";
 
             ?>
+
         </div>
     </div>
 

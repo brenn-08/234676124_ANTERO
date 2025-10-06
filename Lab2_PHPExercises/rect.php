@@ -97,7 +97,7 @@
             $area = $length * $width;
             $perimeter = 2 * ($length * $width);
 
-            echo "Given rectangle dimensions: <br> Length: <span class='color'>$length</span> <br> Width: <span class='color'>$width</span>. <br><br> Area: $area <br> Perimeter: $perimeter"
+            echo "Given rectangle dimensions: <br> Length: <span class='color'>$length</span> <br> Width: <span class='color'>$width</span> <br><br> Area: $area <br> Perimeter: $perimeter";
 
             ?>
         </div>

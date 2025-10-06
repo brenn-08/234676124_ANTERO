@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperature Converter</title>
+    <title>Swapping Variables</title>
 
     <style>
         body {
@@ -35,7 +35,7 @@
             text-align: center;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
             border-radius: 4px;
-            transform: rotate(2deg);
+            transform: rotate(-2deg);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -47,7 +47,7 @@
         .photo {
             width: 100%;
             height: 220px;
-            background-image: url('https://i0.wp.com/inasianspaces.com/wp-content/uploads/2025/08/the-fragrant-flower-blooms-with-dignity-kaoruko-and-subaru-at-cafe.jpg?resize=840,473&ssl=1');
+            background-image: url('https://m.media-amazon.com/images/M/MV5BMTcyZTE0YTMtNjJlYi00YTRmLTk2NWUtNDJlOWU2MzM5YWNhXkEyXkFqcGc@._V1_QL75_UX388_.jpg');
             background-size: cover;
             background-position: center;
             border-radius: 3px;
@@ -85,16 +85,22 @@
 </head>
 
 <body>
-    <h3>Temperature Converter</h3>
+    <h3>Swapping Variables</h3>
 
     <div class="polaroid-card">
         <div class="photo"></div>
         <div class="text">
             <?php
-            $celsius = 26;
-            $fahrenheit = ($celsius * 9 / 5) + 32;
+            $a = 10;
+            $b = 20;
 
-            echo "Given temperature:<br> Celsius: <span class='color'>$celsius °C</span> <br><br>Celsius to Fahrenheit:<br> Fahrenheit: <span class='color'>$fahrenheit °F</span>";
+            echo "Before swapping:<br> a = <span class='color'>$a</span><br> b = <span class='color'>$b</span><br><br>";
+
+            $temp = $a;
+            $a = $b;
+            $b = $temp;
+
+            echo "After swapping:<br> a = <span class='color'>$a</span><br> b = <span class='color'>$b</span><br>";
 
             ?>
         </div>
