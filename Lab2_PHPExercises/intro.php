@@ -84,6 +84,54 @@
         .colorTwo {
             color: purple;
         }
+
+        @media (max-width: 900px) {
+            .polaroid-card {
+                width: 300px;
+                padding: 15px;
+            }
+
+            .photo {
+                height: 180px;
+            }
+
+            h3 {
+                font-size: 1.8rem;
+            }
+
+            .text {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .polaroid-card {
+                width: 90%;
+                padding: 15px;
+                transform: none;
+            }
+
+            .photo {
+                height: 160px;
+            }
+
+            h3 {
+                font-size: 1.6rem;
+            }
+
+            .text {
+                font-size: 1rem;
+            }
+
+            .back-btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 
