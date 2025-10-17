@@ -139,15 +139,27 @@
     <div class="polaroid-card">
         <div class="photo"></div>
         <div class="text">
+            <form action="" method="POST">
+                <label for="length">Enter the length of the rectangle:</label><br>
+                <input type="number" name="length" id="length" required><br><br>
+
+                <label for="width">Enter the width of the rectangle:</label><br>
+                <input type="number" name="width" id="width" required><br><br>
+
+                <input type="submit" value="Calculate">
+            </form>
+
             <?php
-            $length = 8;
-            $width = 8;
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $length = (float) $_POST["a"];
+                $width = (float) $_POST["b"];
 
-            $area = $length * $width;
-            $perimeter = 2 * ($length * $width);
+                $area = $length * $width;
+                $perimeter = 2 * ($length * $width);
 
-            echo "Given rectangle dimensions: <br> Length: <span class='color'>$length</span> <br> Width: <span class='color'>$width</span> <br><br> Area: $area <br> Perimeter: $perimeter";
-
+                echo "<br><hr><br>";
+                echo "Given rectangle dimensions: <br> Length: <span class='color'>$length</span> <br> Width: <span class='color'>$width</span> <br><br> Area: $area <br> Perimeter: $perimeter";
+            }
             ?>
         </div>
     </div>
