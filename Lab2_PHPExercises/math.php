@@ -138,19 +138,30 @@
     <div class="polaroid-card">
         <div class="photo"></div>
         <div class="text">
+            <form action="" method="POST">
+                <label for="a">Enter first number:</label><br>
+                <input type="number" name="a" id="a" required><br><br>
+
+                <label for="b">Enter second number:</label><br>
+                <input type="number" name="b" id="b" required><br><br>
+
+                <input type="submit" value="Calculate">
+            </form>
+
             <?php
-            $a = 8;
-            $b = 9;
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $a = (float) $_POST["a"];
+                $b = (float) $_POST["b"];
 
-            $sum = $a + $b;
-            $difference = $a - $b;
-            $product = $a * $b;
-            $quotient = $a / $b;
+                $sum = $a + $b;
+                $difference = $a - $b;
+                $product = $a * $b;
+                $quotient = $b != 0 ? $a / $b : "undefined (division by zero)";
 
-            echo "Given numbers: <span class='color'>$a</span> and <span class='color'>$b</span> <br><br> Sum: $sum <br> Difference: $difference <br> Product: $product <br> Quotient: $quotient";
-
+                echo "<br><hr><br>";
+                echo "Given numbers: <span class='color'>$a</span> and <span class='color'>$b</span> <br><br> Sum: $sum <br> Difference: $difference <br> Product: $product <br> Quotient: $quotient";
+            }
             ?>
-
         </div>
     </div>
 
