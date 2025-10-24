@@ -151,8 +151,8 @@
 
             <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $length = (float) $_POST["a"];
-                $width = (float) $_POST["b"];
+                $length = (float) $_POST["length"];
+                $width = (float) $_POST["width"];
 
                 $area = $length * $width;
                 $perimeter = 2 * ($length * $width);
