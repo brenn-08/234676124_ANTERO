@@ -77,6 +77,25 @@
             transform: translateY(-3px);
         }
 
+        .btn {
+            margin-top: 30px;
+            font-family: "Bradley Hand", cursive;
+            text-decoration: none;
+            background: #d8c3a5;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 3px 3px 0 #b39b7d;
+            border: none;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #e4d2b6;
+            transform: translateY(-3px);
+        }
+
         .color {
             color: #0077cc;
         }
@@ -137,20 +156,35 @@
     <div class="polaroid-card">
         <div class="photo"></div>
         <div class="text">
+            <form action="" method="POST">
+                <label for="distance">Enter distance (km):</label><br>
+                <input type="number" name="distance" id="distance" required><br><br>
+
+                <label for="fuel_consumption">Enter fuel consumption (km/l):</label><br>
+                <input type="number" name="fuel_consumption" id="fuel_consumption" required><br><br>
+
+                <label for="fuel_price">Enter fuel price (per liter):</label><br>
+                <input type="number" name="fuel_price" id="fuel_price" required><br>
+
+                <input type="submit" class="btn" value="Estimate">
+            </form>
+
             <?php
-            $distance = 200;
-            $fuel_consumption = 10;
-            $fuel_price = 65;
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $distance = $_POST["distance"];
+                $fuel_consumption = $_POST["fuel_consumption"];
+                $fuel_price = $_POST["fuel_price"];
 
-            $fuel_needed = $distance / $fuel_consumption;
+                $fuel_needed = $distance / $fuel_consumption;
 
-            $travel_cost = $fuel_needed * $fuel_price;
+                $travel_cost = $fuel_needed * $fuel_price;
 
-            echo "<strong>Distance: </strong>$distance km<br><strong>Fuel Consumption: </strong>$fuel_consumption km/l<br><strong>Fuel Price: </strong>$fuel_price per liter<br><br>";
-            echo "<strong>Estimated Travel Cost: </strong>" . number_format($travel_cost, 2) . "<br>";
+                echo "<br><hr><br>";
 
+                echo "<strong>Distance: </strong>$distance km<br><strong>Fuel Consumption: </strong>$fuel_consumption km/l<br><strong>Fuel Price: </strong>$fuel_price per liter<br><br>";
+                echo "<strong>Estimated Travel Cost: </strong>" . number_format($travel_cost, 2) . "<br>";
+            }
             ?>
-
         </div>
     </div>
 

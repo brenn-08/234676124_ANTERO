@@ -77,6 +77,25 @@
             transform: translateY(-3px);
         }
 
+        .btn {
+            margin-top: 30px;
+            font-family: "Bradley Hand", cursive;
+            text-decoration: none;
+            background: #d8c3a5;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 3px 3px 0 #b39b7d;
+            border: none;           
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #e4d2b6;
+            transform: translateY(-3px);
+        }
+
         .color {
             color: #0077cc;
         }
@@ -138,14 +157,27 @@
     <div class="polaroid-card">
         <div class="photo"></div>
         <div class="text">
+            <form action="" method="POST">
+                <label for="weight">Enter weight:</label><br>
+                <input type="number" name="weight" id="weight" required><br><br>
+
+                <label for="height">Enter height:</label><br>
+                <input type="float" name="height" id="height" required><br>
+
+                <input type="submit" class="btn" value="Calculate">
+            </form>
+
             <?php
-            $weight = 50;
-            $height = 1.60;
-            $bmi = $weight / ($height * $height);
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $weight = (float) $_POST["weight"];
+                $height = (float) $_POST["height"];
 
-            echo "Given:<br> Weight = <span class='color'>$weight kg</span><br> Height = <span class='color'>$height m</span><br><br>";
+                $bmi = $weight / ($height * $height);
+
+                echo "<br><hr><br>";
+                echo "Given:<br> Weight = <span class='color'>$weight kg</span><br> Height = <span class='color'>$height m</span><br><br>";
             echo "BMI = <span class='color'>" . round($bmi, 2) . "</span>";
-
+            }
             ?>
         </div>
     </div>

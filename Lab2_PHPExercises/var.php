@@ -77,6 +77,25 @@
             transform: translateY(-3px);
         }
 
+        .btn {
+            margin-top: 30px;
+            font-family: "Bradley Hand", cursive;
+            text-decoration: none;
+            background: #d8c3a5;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 3px 3px 0 #b39b7d;
+            border: none;           
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #e4d2b6;
+            transform: translateY(-3px);
+        }
+
         .color {
             color: #0077cc;
         }
@@ -138,18 +157,30 @@
     <div class="polaroid-card">
         <div class="photo"></div>
         <div class="text">
+            <form action="" method="POST">
+                <label for="a">Enter first variable:</label><br>
+                <input type="number" name="a" id="a" required><br><br>
+
+                <label for="b">Enter second variable:</label><br>
+                <input type="number" name="b" id="b" required><br>
+
+                <input type="submit" class="btn" value="Swap">
+            </form>
+
             <?php
-            $a = 10;
-            $b = 20;
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $a = (float) $_POST["a"];
+                $b = (float) $_POST["b"];
 
-            echo "Before swapping:<br> a = <span class='color'>$a</span><br> b = <span class='color'>$b</span><br><br>";
+                echo "<br><hr><br>";
+                echo "Before swapping:<br> a = <span class='color'>$a</span><br> b = <span class='color'>$b</span><br><br>";
 
-            $temp = $a;
-            $a = $b;
-            $b = $temp;
+                $temp = $a;
+                $a = $b;
+                $b = $temp;
 
-            echo "After swapping:<br> a = <span class='color'>$a</span><br> b = <span class='color'>$b</span><br>";
-
+                echo "After swapping:<br> a = <span class='color'>$a</span><br> b = <span class='color'>$b</span><br>";
+            }
             ?>
         </div>
     </div>

@@ -77,6 +77,26 @@
             transform: translateY(-3px);
         }
 
+        .btn {
+            margin-top: 30px;
+            font-family: "Bradley Hand", cursive;
+            text-decoration: none;
+            background: #d8c3a5;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 3px 3px 0 #b39b7d;
+            border: none;           
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #e4d2b6;
+            transform: translateY(-3px);
+        }
+
+
         .color {
             color: #0077cc;
         }
@@ -138,12 +158,21 @@
     <div class="polaroid-card">
         <div class="photo"></div>
         <div class="text">
+            <form action="" method="POST">
+                <label for="celsius">Enter celsius temperature (°C):</label><br>
+                <input type="number" name="celsius" id="celsius" required><br>
+
+                <input type="submit" class="btn" value="Convert">
+            </form>
+
             <?php
-            $celsius = 26;
-            $fahrenheit = ($celsius * 9 / 5) + 32;
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $celsius = $_POST["celsius"];
+                $fahrenheit = ($celsius * 9 / 5) + 32;
 
-            echo "Given temperature:<br> Celsius: <span class='color'>$celsius °C</span> <br><br>Celsius to Fahrenheit:<br> Fahrenheit: <span class='color'>$fahrenheit °F</span>";
-
+                echo "<br><hr><br>";
+                echo "Given celcius temperature (°C): <span class='color'>$celsius</span><br><br> Celsius to Fahrenheit: <span class='color'>$fahrenheit °F</span>";
+            }
             ?>
         </div>
     </div>

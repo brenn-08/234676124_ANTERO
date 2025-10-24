@@ -77,6 +77,25 @@
             transform: translateY(-3px);
         }
 
+        .btn {
+            margin-top: 30px;
+            font-family: "Bradley Hand", cursive;
+            text-decoration: none;
+            background: #d8c3a5;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 3px 3px 0 #b39b7d;
+            border: none;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #e4d2b6;
+            transform: translateY(-3px);
+        }
+
         .color {
             color: #0077cc;
         }
@@ -128,7 +147,6 @@
                 font-size: 0.9rem;
             }
         }
-
     </style>
 </head>
 
@@ -138,24 +156,33 @@
     <div class="polaroid-card">
         <div class="photo"></div>
         <div class="text">
+            <form action="" method="POST">
+                <label for="php">Enter the amount in PHP:</label><br>
+                <input type="number" name="php" id="php" required><br>
+
+                <input type="submit" class="btn" value="Convert">
+            </form>
+
             <?php
-            $php = "8000";
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $php = $_POST["php"];
 
+                // as of October 6, 2025 rates
+                $usd_rate = 58.11;
+                $eur_rate = 67.97;
+                $jpy_rate = 0.39;
 
-            // as of October 6, 2025 rates
-            $usd_rate = 58.11; 
-            $eur_rate = 67.97; 
-            $jpy_rate = 0.39;  
+                $usd = $php * $usd_rate;
+                $eur = $php * $eur_rate;
+                $jpy = $php * $jpy_rate;
 
-            $usd = $php * $usd_rate;
-            $eur = $php * $eur_rate;
-            $jpy = $php * $jpy_rate;
+                echo "<br><hr><br>";
+                echo "Amount in PHP: <span class='color'>₱$php</span><br><br><strong>Converted to:</strong><br>";
+                echo "United States Dollar: <span class='color'>$" . number_format($usd, 2) . "</span><br>";
+                echo "Euro: <span class='color'>€" . number_format($eur, 2) . "</span><br>";
+                echo "Japanese Yen: <span class='color'>¥" . number_format($jpy, 2) . "</span><br>";
 
-            echo "Amount in PHP: <span class='color'>₱$php</span><br><br><strong>Converted to:</strong><br>";
-            echo "United States Dollar: <span class='color'>$" . number_format($usd, 2) . "</span><br>";
-            echo "Euro: <span class='color'>€" . number_format($eur, 2) . "</span><br>";
-            echo "Japanese Yen: <span class='color'>¥" . number_format($jpy, 2) . "</span><br>";
-
+            }
             ?>
         </div>
     </div>

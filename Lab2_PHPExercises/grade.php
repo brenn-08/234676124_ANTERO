@@ -77,6 +77,25 @@
             transform: translateY(-3px);
         }
 
+        .btn {
+            margin-top: 30px;
+            font-family: "Bradley Hand", cursive;
+            text-decoration: none;
+            background: #d8c3a5;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 3px 3px 0 #b39b7d;
+            border: none;           
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #e4d2b6;
+            transform: translateY(-3px);
+        }
+
         .color {
             color: #0077cc;
         }
@@ -137,32 +156,47 @@
     <div class="polaroid-card">
         <div class="photo"></div>
         <div class="text">
+            <form action="" method="POST">
+                <label for="math">Enter grade in Math:</label><br>
+                <input type="number" name="math" id="math" required><br>
+
+                <label for="english">Enter grade in English:</label><br>
+                <input type="number" name="english" id="english" required><br>
+
+                <label for="science">Enter grade in Science:</label><br>
+                <input type="number" name="science" id="science" required><br>
+
+                <input type="submit" class="btn" value="Calculate">
+            </form>
+
             <?php
-            $math = 98;
-            $english = 94;
-            $science = 98;
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $math = $_POST["math"];
+                $english = $_POST["english"];
+                $science = $_POST["science"];
 
-            $average = ($math + $english + $science) / 3;
+                $average = ($math + $english + $science) / 3;
 
-            echo "<strong>Math: </strong>$math<br><strong>English: </strong>$english<br><strong>Science: </strong>$science<br><br>";
-            echo "<strong>Average: </strong>" . number_format($average, 2) . "<br>";
+                echo "<br><hr><br>";
+                echo "<strong>Math: </strong>$math<br><strong>English: </strong>$english<br><strong>Science: </strong>$science<br><br>";
+                echo "<strong>Average: </strong>" . number_format($average, 2) . "<br>";
 
-            if ($average >= 90) {
-                $grade = "A";
-            } elseif ($average >= 80) {
-                $grade = "B";
-            } elseif ($average >= 70) {
-                $grade = "C";  
-            } elseif ($average >= 60) {
-                $grade = "D"; 
-            } else {
-                $grade = "F";
+                if ($average >= 90) {
+                    $grade = "A";
+                } elseif ($average >= 80) {
+                    $grade = "B";
+                } elseif ($average >= 70) {
+                    $grade = "C";  
+                } elseif ($average >= 60) {
+                    $grade = "D"; 
+                } else {
+                    $grade = "F";
+                }
+
+                echo "<strong>Grade:</strong> <span class='color'>$grade</span>";
+
             }
-
-            echo "<strong>Grade:</strong> <span class='color'>$grade</span>"
-
             ?>
-
         </div>
     </div>
 

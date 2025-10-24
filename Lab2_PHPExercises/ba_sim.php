@@ -77,6 +77,25 @@
             transform: translateY(-3px);
         }
 
+        .btn {
+            margin-top: 30px;
+            font-family: "Bradley Hand", cursive;
+            text-decoration: none;
+            background: #d8c3a5;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 3px 3px 0 #b39b7d;
+            border: none;           
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #e4d2b6;
+            transform: translateY(-3px);
+        }
+
         .color {
             color: #0077cc;
         }
@@ -138,17 +157,33 @@
     <div class="polaroid-card">
         <div class="photo"></div>
         <div class="text">
+            <form action="" method="POST">
+                <label for="balance">Enter balance:</label><br>
+                <input type="number" name="balance" id="balance" required><br><br>
+
+                <label for="deposit">Enter deposit:</label><br>
+                <input type="number" name="deposit" id="deposit" required><br><br>
+
+                <label for="withdraw">Enter withdrawal:</label><br>
+                <input type="number" name="withdraw" id="withdraw" required><br>
+
+                <input type="submit" class="btn" value="Compute">
+            </form>
+
             <?php
-            $balance = 8000;
-            $deposit = 600;
-            $withdraw = 400;
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $balance = $_POST["balance"];
+                $deposit = $_POST["deposit"];
+                $withdraw = $_POST["withdraw"];
 
-            echo "Balance: <span class='color'>₱$balance</span><br> Deposit: <span class='color'>₱$deposit</span><br> Withdraw: <span class='color'>₱$withdraw</span><br><br>";
+                echo "<br><hr><br>";
 
-            $balance = $balance + $deposit - $withdraw;
+                echo "Balance: <span class='color'>₱$balance</span><br> Deposit: <span class='color'>₱$deposit</span><br> Withdraw: <span class='color'>₱$withdraw</span><br><br>";
 
-            echo "Final Balance: <span class='color'>₱$balance</span>";
+                $balance = $balance + $deposit - $withdraw;
 
+                echo "<strong>Final Balance: </strong><span class='color'>₱$balance</span>";
+            }
             ?>
         </div>
     </div>

@@ -77,8 +77,27 @@
             transform: translateY(-3px);
         }
 
+        .btn {
+            margin-top: 30px;
+            font-family: "Bradley Hand", cursive;
+            text-decoration: none;
+            background: #d8c3a5;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 3px 3px 0 #b39b7d;
+            border: none;           
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #e4d2b6;
+            transform: translateY(-3px);
+        }
+
         .color {
-            color: blue;
+            color: #0077cc;
         }
 
         @media (max-width: 900px) {
@@ -144,9 +163,9 @@
                 <input type="number" name="length" id="length" required><br><br>
 
                 <label for="width">Enter the width of the rectangle:</label><br>
-                <input type="number" name="width" id="width" required><br><br>
+                <input type="number" name="width" id="width" required><br>
 
-                <input type="submit" value="Calculate">
+                <input type="submit" class="btn" value="Calculate">
             </form>
 
             <?php

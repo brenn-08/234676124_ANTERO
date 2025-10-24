@@ -77,6 +77,25 @@
             transform: translateY(-3px);
         }
 
+        .btn {
+            margin-top: 30px;
+            font-family: "Bradley Hand", cursive;
+            text-decoration: none;
+            background: #d8c3a5;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 3px 3px 0 #b39b7d;
+            border: none;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #e4d2b6;
+            transform: translateY(-3px);
+        }
+
         .color {
             color: purple;
         }
@@ -137,17 +156,27 @@
     <div class="polaroid-card">
         <div class="photo"></div>
         <div class="text">
+            <form action="" method="POST">
+                <label for="text">Enter text:</label><br>
+                <input type="string" name="str" id="str" required><br>
+
+                <input type="submit" class="btn" value="Manipulate">
+            </form>
+
             <?php
-            $str = "Women, they have minds, and they have souls, as well as just hearts. <br> — Jo March";
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $str = $_POST["str"];
 
-            echo "<strong>Original Text: </strong><br><span class='color'>$str</span><br><br>";
-            echo "<strong>Number of Characters: </strong>" . strlen($str) . "<br>";
-            echo "<strong>Number of Words: </strong>" . str_word_count($str) . "<br><br>";
-            echo "<strong>In Uppercase: </strong>" . strtoupper($str) . "<br>";
-            echo "<strong>In Lowercase: </strong>" . strtolower($str) . "<br>";
+                echo "<br><hr><br>";
 
+                echo "<strong>Original Text: </strong><br><span class='color'>$str</span><br><br>";
+                echo "<strong>Number of Characters: </strong>" . strlen($str) . "<br>";
+                echo "<strong>Number of Words: </strong>" . str_word_count($str) . "<br><br>";
+                echo "<strong>In Uppercase: </strong>" . strtoupper($str) . "<br>";
+                echo "<strong>In Lowercase: </strong>" . strtolower($str) . "<br>";
+
+            }
             ?>
-
         </div>
     </div>
 

@@ -77,6 +77,25 @@
             transform: translateY(-3px);
         }
 
+        .btn {
+            margin-top: 30px;
+            font-family: "Bradley Hand", cursive;
+            text-decoration: none;
+            background: #d8c3a5;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 3px 3px 0 #b39b7d;
+            border: none;           
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #e4d2b6;
+            transform: translateY(-3px);
+        }
+
         .color {
             color: #0077cc;
         }
@@ -138,17 +157,31 @@
     <div class="polaroid-card">
         <div class="photo"></div>
         <div class="text">
+            <form action="" method="POST">
+                <label for="basic_salary">Enter basic salary:</label><br>
+                <input type="number" name="basic_salary" id="basic_salary" required><br><br>
+
+                <label for="allowance">Enter allowance:</label><br>
+                <input type="number" name="allowance" id="allowance" required><br><br>
+
+                <label for="deduction">Enter deduction:</label><br>
+                <input type="number" name="deduction" id="deduction" required><br>
+
+                <input type="submit" class="btn" value="Compute">
+            </form>
+
             <?php
-            $basic_salary = 80000;
-            $allowance = 6000;
-            $deduction = 4000;
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $basic_salary = $_POST["basic_salary"];
+                $allowance = $_POST["allowance"];
+                $deduction = $_POST["deduction"];
 
-            $net_salary = $basic_salary + $allowance - $deduction;
+                $net_salary = $basic_salary + $allowance - $deduction;
 
-            echo "Basic Salary: <span class='color'>$basic_salary</span><br>Allowance: <span class='color'>$allowance</span><br>Deduction: <span class='color'>$deduction</span><br><br> Net Salary: <span class='color'>$net_salary</span>";
-
+                echo "<br><hr><br>";
+                echo "Basic Salary: <span class='color'>$basic_salary</span><br>Allowance: <span class='color'>$allowance</span><br>Deduction: <span class='color'>$deduction</span><br><br><strong>Net Salary: </strong><span class='color'>$net_salary</span>";
+            }
             ?>
-
         </div>
     </div>
 
